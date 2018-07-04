@@ -1,9 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package helloworld;
+
+import java.util.*;
+
 
 /**
  *
@@ -11,12 +10,22 @@ package helloworld;
  */
 public class HelloWorld {
 
-    /**
-     * @param args the command line arguments
-     */
+     private static int nTimesK(int n, int k) {
+         System.out.println("n: "+n);
+         
+         if(n > 1) {
+             return k + nTimesK(n - 1, k);
+         }
+         else {
+             return k;
+         }
+     }
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Hello World!");
+        Scanner scanner = new Scanner(System.in);
+        int result = nTimesK(scanner.nextInt(), scanner.nextInt());
+        scanner.close();
+        System.out.println("Result: " + result);
     }
     
 }
