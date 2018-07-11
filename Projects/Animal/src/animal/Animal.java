@@ -10,6 +10,13 @@ public abstract class Animal {
         System.out.println("Animal has been created!");
     }
     
+    // happy = 10;
+    // f(x) = x + 5 + happy;
+    // f(z, d) = z + d + happy;
+    public void doSomething(String thing) {
+        System.out.println("I'm doing " + thing);
+    }
+    
     public abstract void eat();
     
     public void sleep() {
