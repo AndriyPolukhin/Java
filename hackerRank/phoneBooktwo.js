@@ -1,6 +1,7 @@
 function processData(input) {
 
-  const phoneBook = {};
+  const phoneBook = [];
+  input = input.split('\n');
   const n = parseInt(input[0]);
   const pairs = input.slice(1, n + 1);
   const query = input.slice(input.length - pairs.length);
